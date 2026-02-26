@@ -2,6 +2,8 @@
 const API_BASE_URL = 'http://127.0.0.1:8000/api';
 
 const api = {
+    baseUrl: API_BASE_URL,
+
     // Utility for handling fetch requests with auth headers
     async request(endpoint, options = {}) {
         const token = localStorage.getItem('sst_token');

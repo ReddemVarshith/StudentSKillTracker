@@ -30,8 +30,27 @@ class RegisterSerializer(serializers.ModelSerializer):
         return user
 
 from .models import HackathonParticipation
+import cloudinary
+
+class CloudinaryURLField(serializers.Field):
+    """Returns the full https:// Cloudinary URL for a CloudinaryField."""
+    def to_representation(self, value):
+        if not value:
+            return None
+        # value is a CloudinaryResource or a string public_id
+        try:
+            return cloudinary.CloudinaryImage(str(value)).url
+        except Exception:
+            return str(value)
+
+    def to_internal_value(self, data):
+        return data
+
 
 class HackathonParticipationSerializer(serializers.ModelSerializer):
+    participation_certificate = CloudinaryURLField(required=True)
+    winning_certificate = CloudinaryURLField(required=False, allow_null=True)
+
     class Meta:
         model = HackathonParticipation
         fields = '__all__'
