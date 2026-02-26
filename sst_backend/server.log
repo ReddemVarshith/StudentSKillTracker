@@ -1,0 +1,11 @@
+nohup: ignoring input
+INFO 2026-02-25 07:55:51,657 autoreload Watching for file changes with StatReloader
+WARNING 2026-02-25 08:02:30,341 log Not Found: /
+WARNING 2026-02-25 08:02:30,342 log "GET / HTTP/1.1" 404 2304
+INFO 2026-02-25 08:05:29,464 log "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2026-02-25 08:05:31,882 log "POST /api/auth/register/ HTTP/1.1" 201 130
+INFO 2026-02-25 08:05:32,563 log "OPTIONS /api/me/ HTTP/1.1" 200 0
+WARNING 2026-02-25 08:05:32,570 log Forbidden: /api/me/
+WARNING 2026-02-25 08:05:32,570 log "GET /api/me/ HTTP/1.1" 403 58
+WARNING 2026-02-25 08:06:12,944 log Forbidden: /api/me/
+WARNING 2026-02-25 08:06:12,945 log "PUT /api/me/ HTTP/1.1" 403 58

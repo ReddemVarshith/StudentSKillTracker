@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SST - Profile Setup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="glass-panel auth-container" style="max-width: 600px;">
+        <div class="auth-header">
+            <h2>Complete Your Profile</h2>
+            <p>We need a few details to track your skills.</p>
+        </div>
+
+        <form id="setupForm" class="auth-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <!-- Academic Info -->
+            <div class="form-group" style="grid-column: span 2;">
+                <label for="hall_ticket_number">Hall Ticket Number</label>
+                <input type="text" id="hall_ticket_number" required placeholder="Ex: 21BXXXXXX">
+            </div>
+
+            <div class="form-group" style="grid-column: span 2;">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required placeholder="Ex: John Doe">
+            </div>
+
+            <div class="form-group" style="grid-column: span 2;">
+                <label for="email_id">Email Address</label>
+                <input type="email" id="email_id" required placeholder="your.email@university.edu">
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="CSE">Computer Science</option>
+                    <option value="AIML">AI & ML</option>
+                    <option value="CYBER">Cyber Security</option>
+                    <option value="ECE">Electronics (ECE)</option>
+                    <option value="EEE">Electrical (EEE)</option>
+                    <option value="CIVIL">Civil</option>
+                    <option value="MECH">Mechanical</option>
+                    <option value="IT">Information Tech</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="section">Section</label>
+                <select id="section" required>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                </select>
+            </div>
+
+            <div class="form-group" style="grid-column: span 2;">
+                <label for="batch">Batch</label>
+                <select id="batch" required>
+                    <option value="2023-2027">2023-2027</option>
+                    <option value="2024-2028">2024-2028</option>
+                    <option value="2025-2029">2025-2029</option>
+                </select>
+            </div>
+
+            <!-- Platform Info -->
+            <div class="form-group">
+                <label for="leetcode_username" style="color: var(--leetcode)">LeetCode Username</label>
+                <input type="text" id="leetcode_username" required placeholder="Required">
+            </div>
+
+            <div class="form-group">
+                <label for="codechef_username" style="color: var(--codechef)">CodeChef Username</label>
+                <input type="text" id="codechef_username" required placeholder="Required">
+            </div>
+
+            <div class="form-group">
+                <label for="gfg_username" style="color: var(--gfg)">GeeksForGeeks Username</label>
+                <input type="text" id="gfg_username" required placeholder="Required">
+            </div>
+
+            <div class="form-group">
+                <label for="hackerrank_username" style="color: var(--hackerrank)">HackerRank Username</label>
+                <input type="text" id="hackerrank_username" required placeholder="Required">
+            </div>
+
+            <div style="grid-column: span 2;">
+                <button type="submit" class="btn btn-primary btn-block">Save to Dashboard</button>
+            </div>
+
+            <div id="setup-error" class="hidden error-box" style="grid-column: span 2;"></div>
+        </form>
+
+    </div>
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/setup.js"></script>
+</body>
+
+</html>
