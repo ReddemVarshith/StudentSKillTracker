@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             const token = localStorage.getItem('sst_token');
-            const res = await fetch(`${api.baseUrl}/hackathons/`, {
+            const res = await fetch(`${API_BASE_URL}/hackathons/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Token ${token}`

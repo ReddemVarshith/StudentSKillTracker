@@ -130,9 +130,9 @@ import cloudinary
 import cloudinary_storage
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'djgau34yl',
-    'API_KEY': '563652367987464',
-    'API_SECRET': '9Y6Mi42CaciAVaWKoocpJP07Qos'
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME', 'djgau34yl'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY', '563652367987464'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET', '9Y6Mi42CaciAVaWKoocpJP07Qos')
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
